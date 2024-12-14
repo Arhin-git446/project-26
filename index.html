@@ -1,0 +1,69 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>JavaScript Class Project</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            background-color: #f4f4f4;  
+            padding: 20px;  
+        }  
+        h1 {  
+            color: #333;  
+        }  
+        #output {  
+            margin-top: 20px;  
+            padding: 10px;  
+            background: #fff;  
+            border: 1px solid #ccc;  
+        }  
+    </style>  
+</head>  
+<body>  
+
+    <h1>JavaScript Class Example</h1>  
+    <button onclick="displayClassProperties()">Display Class Properties</button>  
+
+    <div id="output"></div>  
+
+    <script>  
+        class Animal {  
+            constructor(name, species) {  
+                this.name = name;  
+                this.species = species;  
+            }  
+
+            static info() {  
+                return "Animals are living organisms that are capable of movement.";  
+            }  
+
+            displayProperties() {  
+                return `Name: ${this.name}, Species: ${this.species}`;  
+            }  
+        }  
+
+        class Dog extends Animal {  
+            constructor(name, breed) {  
+                super(name, 'Dog');  
+                this.breed = breed;  
+            }  
+
+            displayProperties() {  
+                return `${super.displayProperties()}, Breed: ${this.breed}`;  
+            }  
+        }  
+
+        function displayClassProperties() {  
+            const myDog = new Dog("Buddy", "Golden Retriever");  
+            const outputDiv = document.getElementById("output");  
+            outputDiv.innerHTML = `  
+                <p>${Dog.info()}</p>  
+                <p>${myDog.displayProperties()}</p>  
+            `;  
+        }  
+    </script>  
+
+</body>  
+</html>

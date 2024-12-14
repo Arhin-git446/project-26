@@ -1,0 +1,6 @@
+HTML Structure: Basic structure with a title and a button to display properties.
+CSS Styles: Simple styles to improve visual appearance.
+JavaScript Code:
+Animal Class: Base class with a constructor and a static method info().
+Dog Class: Inherits from Animal, adding a breed property and overriding the displayProperties() method.
+Function: displayClassProperties() creates an instance of Dog and updates the output div with the class information
